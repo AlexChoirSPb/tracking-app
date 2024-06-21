@@ -6,7 +6,7 @@ import { PAGE_PROGRESS, PAGE_TIMELINE } from "../constants";
 import { isPageValid } from "../validators";
 
 const emit = defineEmits({
-	navigate: isPageValid,
+  navigate: isPageValid,
 });
 </script>
 

@@ -23,7 +23,7 @@ const props = defineProps({
     type: String,
   },
 });
-const emit = defineEmits([['select' ]]);
+const emit = defineEmits([["select"]]);
 const isNotSelected = computed(() => isUndefinedOrNull(props.selected));
 </script>
 

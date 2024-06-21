@@ -10,6 +10,10 @@ const props = defineProps({
       return timelineItems.every(isTimelineItemValid);
     },
   },
+  activitySelectOptions: {
+    required: true,
+    type: Array,
+  },
 });
 </script>
 
@@ -20,6 +24,7 @@ const props = defineProps({
         v-for="timelineItem in timelineItems"
         :key="timelineItem.hour"
         :timeline-item="timelineItem"
+        :activity-select-options="activitySelectOptions"
       />
     </ul>
   </div>

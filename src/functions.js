@@ -22,3 +22,42 @@ export function generateTimelineItems() {
 
   return timelineItems;
 }
+
+export function generateActivitySelectOptions(activities) {
+  return activities.map((activity) => ({
+    label: activity.name,
+    value: activity.id,
+  }));
+}
+
+export function generateActivities() {
+  return [
+    {
+      id: id(),
+      name: "Coding",
+      secondsToComplete: 3600,
+    },
+    {
+      id: id(),
+      name: "Trainig",
+      secondsToComplete: 3600,
+    },
+    {
+      id: id(),
+      name: "Reading",
+      secondsToComplete: 1800,
+    },
+  ];
+}
+
+export function generateActivity(name) {
+  return {
+    id: id(),
+    name: name,
+    secondsToComplete: 0,
+  };
+}
+
+function id() {
+  return +(Date.now().toString(10) + Math.random().toString(10).substring(2));
+}

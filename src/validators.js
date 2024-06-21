@@ -28,7 +28,7 @@ export function isUndefinedOrNull(value) {
 }
 
 export function isActivityValid(activity) {
-  return typeof activity === "string" && activity.length > 0;
+  return typeof activity === "object";
 }
 
 export function validateActivities(activities) {
